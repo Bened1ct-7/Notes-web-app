@@ -54,11 +54,11 @@ class UI {
                       <i onclick="showMenu(this)" class="bi bi-three-dots fs-4 text-primary settings-icon"></i>
                       <ul class="menu p-1 m-0 rounded">
                         <li onclick="UI.editNote(${index})" class="pe-1">
-                          <i class="bi bi-pen me-1 p-1 text"></i>
+                          <i class="bi bi-pen me-1 p-1 text-primary"></i>
                           <div class="text">Edit</div>
                         </li>
                         <li onclick="UI.deleteNote(${index})" class="pe-1">
-                          <i class="bi bi-trash me-1 p-1 text"></i>
+                          <i class="bi bi-trash me-1 p-1 text-primary"></i>
                           <div class="text">Delete</div>
                         </li>
                       </ul>
