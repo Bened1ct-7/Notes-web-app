@@ -1,0 +1,171 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+ 
+ * {
+   box-sizing: border-box !important;
+   font-family: "Poppins", sans-serif !important;
+ }
+ 
+ :root {
+   --white: #fff;
+   --white-md: #fcfcfc;
+   --dark-white: rgba(230, 230, 230, 1);
+   --text-white: #fff;
+   --text-dark: #111;
+   --note-border: #ddd;
+ }
+ 
+ .dark-theme {
+   --white: #111;
+   --white-md: #1a1a1a;
+   --dark-white: rgba(50, 50, 50, 1);
+   --text-white: #111;
+   --text-dark: #fff;
+   --note-border: #555;
+ }
+ 
+ ul, li {
+   list-style: none;
+ }
+ 
+ body {
+   background: var(--dark-white) !important;
+   transition: all 0.2s ease;
+ }
+ 
+ .fade-in {
+  animation: fade 0.3s ease 1 !important;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  } to {
+    opacity: 1;
+    transform: 1;
+  }
+}
+ 
+ .plus {
+   position: fixed;
+   bottom: 9%;
+   right: 9%;
+   height: 3.5rem;
+   width: 3.5rem;
+   border-radius: 50%;
+   z-index: 9;
+ }
+ 
+ textarea.form-control {
+   height: 6.2rem !important;
+ }
+ 
+ .error-text {
+   display: none;
+ }
+ 
+ .info{
+   background: var(--white) !important;
+ }
+ 
+ .error-text.show {
+   display: block;
+ }
+ 
+ header {
+   z-index: 99;
+ }
+ 
+ .plus i {
+   font-size: 2.4rem;
+ }
+ 
+ .popup {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.25);
+   z-index: 9999;
+   opacity: 0;
+   pointer-events: none;
+   transition: all 0.3s ease;
+ }
+ 
+ .popup.show {
+   opacity: 1;
+   pointer-events: auto;
+ }
+ 
+ .popup > div {
+   background: rgba(240, 240, 240, 1);
+ }
+ 
+ .flex {
+   display: flex;
+   align-items: center;
+ }
+ 
+ .popup button {
+   height: 40px !important;
+ }
+ 
+ .between {
+   justify-content: space-between;
+ }
+ 
+ .around {
+   justify-content: space-around;
+ }
+ 
+ .center {
+   justify-content: center;
+ }
+ 
+ .text {
+   color: var(--text-dark) !important;
+ }
+ 
+ .light-bg {
+   background: var(--white) !important;
+ }
+ 
+ .note {
+   background: var(--white-md);
+ }
+
+.note .note-footer {
+  border-top: 1px solid var(--note-border);
+}
+
+.note .settings {
+  position: relative;
+}
+
+.note .settings .menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  list-style-type: none;
+  background: var(--white);
+  z-index: 9;
+  transition: all 0.3s ease;
+  transform: scale(0);
+  transform-origin: top right;
+}
+
+.note .settings .menu.show {
+  transform: scale(1);
+}
+
+.note .menu li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.note-body {
+  height: 100px;
+  overflow-y: scroll;
+}
