@@ -103,7 +103,7 @@ class UI {
         const noteTitle = title.value;
         const noteDesc = description.value;
         const month = months[date.getMonth()];
-        const day = date.getDay();
+        const day = date.getDate();
         const year = date.getFullYear();
         const noteDate = `${month} ${day}, ${year}`;
         note.title = title.value;
@@ -157,7 +157,7 @@ function createNote() {
   const noteTitle = title.value;
   const noteDesc = description.value;
   const month = months[date.getMonth()];
-  const day = date.getDay();
+  const day = date.getDate();
   const year = date.getFullYear();
 
   const noteDate = `${month} ${day}, ${year}`;
